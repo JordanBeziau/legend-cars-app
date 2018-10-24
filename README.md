@@ -2,25 +2,29 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
-## Development server
+## Install app
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Clone this repository then run `npm install`
 
-## Code scaffolding
+Create a mysql database, default is `legend_cars`
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Server DB configuration (in server.js) :
+```javascript
+{
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'root',
+  database: 'legend_cars',
+  port: 8889
+}
+```
+You can load dump.sql to store a bunch of data.
 
-## Build
+## Run app
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+Run `npm start` to launch the app
+Front app run on 4200 port and back on 3000 port
+You can run separately `nodemon server.js` and `ng serve`
 
 ## Further help
 
