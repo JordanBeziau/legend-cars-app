@@ -1,0 +1,13 @@
+<h1>Cars</h1>
+
+<div class="list-container" *ngIf="cars">
+  <app-list *ngFor="let item of cars" [data]="item" (removeCar)="handleRemove($event)"></app-list>
+</div>
+
+<div *ngIf="!cars" class="ui segment">
+  <div class="ui active dimmer">
+    <div class="ui medium text loader">Loading</div>
+  </div>
+  <p></p>
+  <p></p>
+</div>

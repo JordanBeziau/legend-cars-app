@@ -1,0 +1,13 @@
+.image {
+  text-align: center;
+  padding: 1em;
+}
+
+.image img {
+  width: 400px;
+}
+
+.menu {
+  margin-top: 1em !important;
+  margin-bottom: 1em !important;
+}

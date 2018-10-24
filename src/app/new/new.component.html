@@ -1,0 +1,35 @@
+<h4 class="ui dividing header">New car form</h4>
+
+<div *ngIf="displayError" class="ui error message">
+  <div class="header">Invalid form</div>
+  <p>Please, fill in every fields.</p>
+</div>
+
+<div *ngIf="displaySuccess" class="ui success message">
+  <div class="header">Form Completed</div>
+  <p>New car added successfully.</p>
+</div>
+
+<form (submit)="handleSubmit($event, brand, model, description, price, color)" class="ui form">
+  <div class="field">
+    <label>Brand</label>
+    <input type="text" name="brand" #brand placeholder="Brand">
+  </div>
+  <div class="field">
+    <label>Model</label>
+    <input type="text" name="model" #model placeholder="Model">
+  </div>
+  <div class="field">
+    <label>Description</label>
+    <input type="text" name="description" #description placeholder="Description">
+  </div>
+  <div class="field">
+    <label>Price</label>
+    <input type="text" name="price" #price placeholder="Price">
+  </div>
+  <div class="field">
+    <label>Color</label>
+    <input type="text" name="color" #color placeholder="Color">
+  </div>
+  <button class="ui button" type="submit">Submit</button>
+</form>

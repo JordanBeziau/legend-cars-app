@@ -1,0 +1,22 @@
+<div class="ui card">
+  <div class="content">
+    <i (click)="handleRemove()" class="right floated remove icon"></i>
+    <div class="header">{{data.brand}}</div>
+    <div class="meta">
+      {{data.model}}
+    </div>
+    <div class="description">
+      <p>{{data.description}}</p>
+    </div>
+  </div>
+  <div class="extra content">
+    <span class="left floated tint">
+      <i class="tint icon"></i>
+      {{data.color}}
+    </span>
+    <span class="right floated dollar sign">
+      <i class="dollar sign icon"></i>
+      {{data.price}}
+    </span>
+  </div>
+</div>
