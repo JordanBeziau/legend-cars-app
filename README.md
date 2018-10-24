@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.3.
 
-# Install app
+## Install app
 
 Clone this repository then run `npm install`
 
@@ -20,7 +20,7 @@ Server DB configuration (in server.js) :
 ```
 You can load dump.sql to store a bunch of data.
 
-# Run app
+## Run app
 
 Run `npm start` to launch the app
 Front app run on 4200 port and back on 3000 port
