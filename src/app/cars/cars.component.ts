@@ -8,6 +8,7 @@ import { ApiService } from '../services/api.service';
 })
 export class CarsComponent implements OnInit {
   cars: any;
+  carsFiltered: any;
 
   constructor(private apiService: ApiService) {}
 
@@ -16,6 +17,7 @@ export class CarsComponent implements OnInit {
       data => {
         console.log(data);
         this.cars = data;
+        this.carsFiltered = this.cars;
       },
       err => {
         console.warn(err);
@@ -24,7 +26,6 @@ export class CarsComponent implements OnInit {
   }
 
   handleRemove = (id: number, event) => {
-    console.log(id);
     this.apiService.removeCar(id).subscribe(
       data => {
         this.cars = this.cars.filter(item => item.id !== id);
@@ -33,5 +34,12 @@ export class CarsComponent implements OnInit {
         console.warn(err);
       }
     );
+  };
+
+  handleSearch = (search: object) => {
+    this.carsFiltered = this.cars.filter(item => {
+      const reg = new RegExp(search['search'], 'i');
+      return item[search['scope']].search(reg) !== -1;
+    });
   };
 }

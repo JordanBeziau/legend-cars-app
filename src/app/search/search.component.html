@@ -1,0 +1,9 @@
+<form (submit)="handleSubmit($event, search, scope)" class="ui action input">
+  <input #search type="text" placeholder="Search...">
+  <select #scope class="ui compact selection dropdown">
+    <option value="brand">Brand</option>
+    <option value="model">Model</option>
+    <option value="price">Price</option>
+  </select>
+  <input type="submit" class="ui button" value="Search">
+</form>

@@ -10,6 +10,7 @@ import { CarsComponent } from './cars/cars.component';
 import { HomeComponent } from './home/home.component';
 import { ListComponent } from './list/list.component';
 import { NewComponent } from './new/new.component';
+import { SearchComponent } from './search/search.component';
 
 const appRoutes: Routes = [
   { path: '', redirectTo: '/home', pathMatch: 'full' },
@@ -26,7 +27,8 @@ const appRoutes: Routes = [
     CarsComponent,
     HomeComponent,
     ListComponent,
-    NewComponent
+    NewComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
